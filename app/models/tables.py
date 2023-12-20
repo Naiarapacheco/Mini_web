@@ -1,3 +1,5 @@
+#BANCO DE DADOS
+
 from app import db
 
 class User(db.Model):
@@ -8,6 +10,22 @@ class User(db.Model):
     password = db.Column(db.String)
     name = db.Column(db.String)
     email = db.Column(db.String, unique=True)
+
+    # @property
+    # def is_autenticated(self):
+    #     return True
+    
+    # @property
+    # def is_activate(self):
+    #     return True
+    
+    # @property
+    # def is_anonymous(self):
+    #     return False
+
+    # @property
+    # def get_id(self):
+    #     return str(self.id)
     
     def __init__(self, username, password, name, email):
         self.username = username
