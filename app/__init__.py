@@ -11,7 +11,5 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-# log = LoginManager(app)
-
 from app.models import tables
 from app.controllers import default
